@@ -174,14 +174,14 @@ figure {
 
 .logo {
   position: relative;
-  display: inline-block;
+  display: block;
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
 }
 
 .logo h1 {
-  display: inline-block;
+  display: block;
   color: #fff;
   margin: .50em;
   font: 8vw/0.5em Ringbearer;
@@ -190,7 +190,7 @@ figure {
 
 .logo h3 {
   position: relative;
-  display: inline-block;
+  display: block;
   font: 1.5vw/1.3em Muli-Light;
   color: #fff;
   margin: 0px;
