@@ -27,6 +27,17 @@ a {
   background-color: transparent;
 }
 
+.landingContent video {
+  min-width: 100%; 
+  min-height: 100%; 
+  width: auto;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
 .navWrapper {
   position: fixed;
   right: 0;
@@ -261,7 +272,7 @@ figure {
 }
 
 .winter {
-  color: #006AB0;
+  color: #00548C;
 }
 
 #launcher {
