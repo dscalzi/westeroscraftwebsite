@@ -142,16 +142,6 @@ figure {
   box-sizing: border-box;
 }
 
-.landingContent video {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  background-position: 50%;
-  top: 0;
-  object-fit: cover;
-}
-
 .landingContent:after {
   content: "";
   display: block;
