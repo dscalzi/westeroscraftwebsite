@@ -2,11 +2,12 @@
 
 @font-face {
   font-family: "Ringbearer";
-  src: url("./assets/ringbearer.ttf") format("truetype");
-  src: url("./assets/ringbearer.svg") format("svg");
   src: url("./assets/ringbearer.eot") format("eot");
-  src: url("./assets/ringbearer.woff") format("woff");
-  src: url("./assets/ringbearer.woff2") format("woff2");
+  src: 
+  url("./assets/ringbearer.svg") format("svg"),
+  url("./assets/ringbearer.ttf") format("truetype"),
+  url("./assets/ringbearer.woff") format("woff"),
+  url("./assets/ringbearer.woff2") format("woff2");
   }
 
 
