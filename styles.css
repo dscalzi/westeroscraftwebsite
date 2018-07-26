@@ -1,7 +1,6 @@
-@import url('https://fonts.googleapis.com/css?family=Muli:300,400,800');
 
 @font-face {
-  font-family: 'ringbearermedium';
+  font-family: 'ringbearer';
   src: url('https://westeroscraft.com/fonts/ringm___-webfont.eot');
   src: url('https://westeroscraft.com/fonts/ringm___-webfont.eot?#iefix') format('embedded-opentype'),
        url('https://westeroscraft.com/fonts/ringm___-webfont.woff2') format('woff2'),
@@ -12,44 +11,77 @@
   font-style: normal;
 }
 
-html {
-  line-height: 1.15;
-}
 
-body {
-  margin: 0;
-}
-
-section {
-  display: block;
-}
-
-a {
-  background-color: transparent;
-}
-
-.landingContent video {
-  min-width: 100%; 
-  min-height: 100%; 
-  width: auto;
-  height: auto;
+#section0 .video {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
+  right: 0;
+  bottom: 0;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-size: 100% 100%;
+  background-color: black;
+  background-image: /* our video */;
+  background-position: center center;
+  background-size: contain;
+  object-fit: cover;
+  z-index: 2;
 }
 
-.navWrapper {
+#section0 .content {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 4;
+  width: 100%;
+  color: #f9f9f9;
+}
+
+#section0 .content h1 {
+  font-size: 8vw;
+  font-weight: inherit;
+  font-family: 'ringbearer', serif;
+  letter-spacing: .1em;
+  margin: .3em;
+  text-shadow: 0 1px 0 #ccc, 
+  0 2px 0 #c9c9c9,
+  0 3px 0 #bbb,
+  0 4px 0 #b9b9b9,
+  0 5px 0 #000,
+  0 6px 1px rgba(0,0,0,.1),
+  0 0 5px rgba(0,0,0,.1),
+  0 1px 3px rgba(0,0,0,.3),
+  0 3px 5px rgba(0,0,0,.2),
+  0 5px 10px rgba(0,0,0,.25),
+  0 10px 10px rgba(0,0,0,.2),
+  0 20px 20px rgba(0,0,0,.15);
+}
+
+
+#section0 .content h3 {
+  font-family: 'Lato', sans-serif;
+  text-transform: uppercase;
+  font-size: 2vw;
+  font-weight: 400;
+  letter-spacing: 8px;
+}
+
+#header {
   position: fixed;
   right: 0;
   top: 0;
   z-index: 3;
   width: 100%;
+  display: flex;
+  height: 50px;
+  align-items: center;
 }
 
-.navWrapper:before {
+#header::before {
   content: "";
-  display: block;
   position: absolute;
   background: #000;
   opacity: 0;
@@ -59,52 +91,18 @@ a {
   transition: opacity .35s ease-out;
 }
 
-.navWrapperShow:before {
-  opacity: .6;
-}
-
-.navbar {
-  position: absolute;
-  right: 0;
-  padding: 20px 0;
-  text-transform: uppercase;
-  color: #fff;
-  display: table;
+#header .navbar {
+  margin-left: auto;
 }
 
 .navbarLink {
-  font: 14px/1em Muli;
+  font: 1em Lato;
   font-weight: 400;
   text-decoration: none;
   padding: 0 20px;
-  box-sizing: border-box;
-  position: relative;
   color: #fff;
-  display: table-cell;
-  vertical-align: middle;
-  top: 12.5px;
   cursor: pointer;
-}
-
-.navbarLink:after {
-  content: "";
-  display: block;
-  position: relative;
-  bottom: 5px;
-  height: 5px;
-  width: 0;
-  background: #9F1F12;
-  z-index: -1;
-  transition: all .5s cubic-bezier(0, 0, .2, 1);
-}
-
-.navbarLink:hover:after {
-  width: 100%;
-}
-
-.leftMenu {
-  display: block;
-  position: absolute;
+  text-transform: uppercase;
 }
 
 .navbarLogoWrapper {
@@ -114,531 +112,75 @@ a {
   margin: 0;
   left: 12.5px;
   top: 12.5px;
+
 }
 
 .navbarLogo {
   margin: 0;
   width: 50px;
   height: 50px;
-  background: url("https://westeroscraft.com/Assets/square_logo.png");
+  background: url(https://westeroscraft.com/Assets/square_logo.png);
   background-size: contain;
   background-repeat: no-repeat;
   transition: all .25s cubic-bezier(0, 0, .2, 1);
 }
 
-.navbarLogo:hover {
-  transform: scale(0.9);
-}
-
-.mobileMenu {
-  display: none;
-}
-
-figure {
-  margin: 1em 40px;
-  display: block;
-  -webkit-margin-before: 1em;
-  -webkit-margin-after: 1em;
-  -webkit-margin-start: 40px;
-  -webkit-margin-end: 40px;
-}
-
-.contentWrapper {
-  overflow: hidden;
-  display: block;
-  width: 100%;
-  height: 100%;
-}
-
-#landing {
-  display: block;
-  overflow: hidden;
-  height: 100vh;
+.join-button {
   position: relative;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-.landingContent:after {
-  content: "";
+  overflow: hidden;
+  padding: 0;
+  margin: 0 20px;
   display: inline-block;
+  width: 150px;
+  height: 40px;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  font: 12px/1em Lato;
+  letter-spacing: 2px;
+  line-height: 40px;
+  transition: all .35s ease-out;
+  cursor: pointer;
+  color: inherit;
+  background: darkred;
+}
+/* 
+.join-button::before {
+  content: "";
   position: absolute;
-  width: 100%;
-  height: 100%;
   top: 0;
-  opacity: .2;
-  background: #006AB0;
-}
-
-.landingContentLogo {
-  position: absolute;
-  padding: 10%;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 100%;
-  box-sizing: border-box;
-}
-
-.logo {
-  position: relative;
-  display: inline-block;
-  left: 50%;
-  transform: translateX(-50%);
-  text-align: center;
-}
-
-.logo h1 {
-  display: block;
-  color: #fff;
-  margin: .50em;
-  font: 8vw/0.5em Ringbearer;
-  text-shadow: 2px 2px black;
-}
-
-.logo h3 {
-  position: relative;
-  display: block;
-  font: 1.5vw/1.3em Muli;
-  font-weight: 400;
-  color: #fff;
-  margin: 0px;
-  letter-spacing: 8px;
-  text-align: center;
-  text-transform: uppercase;
-  padding: 0 0 6%;
-}
-
-#top-down-arrow {
-  text-align: center;
+  bottom: 0;
   margin: auto;
-  width: 100%;
-  position: absolute;
-  bottom: 0px;
-	color: #fff;
-  font-size: 80px;
-  animation: bounce 1s infinite alternate;
-  -webkit-animation: bounce 1s infinite alternate;
-	}
-
-#about {
-  background: #fff;
-  position: relative;
-  width: 100%;
-  box-sizing: border-box;
-  padding: 7.5vw 15% 0 10%;
-  display: flex;
+  background: linear-gradient(120deg,#9b4b0a,#ff8939,#9b4b0a);
+  background-size: 400% 400%;
 }
 
-.header h2 {
-  color: #9F1F12;
-  text-transform: uppercase;
-  margin: 10px 0 0 0;
-  font: 1.4vw/1em Muli;
-  font-weight: 600;
-}
-
-.aboutInner {
-  width: 100%;
-  padding: 0;
-  display: block;
-}
-
-.wordWrapper {
-  position: relative;
-  display: inline-block;
+.join-button::after {
   right: 0;
-  padding: 0 0 6vw;
-  margin: 0;
-  flex-basis: 0;
-  flex-grow: 1;
-}
+  width: 100%;
+  animation: gradient-1ziY361 3s ease-in-out infinite;
+  transition: width .5s cubic-bezier(1,0,0,1);
+  z-index: 0;
+} */
 
-.wordWrapper p {
-  font: 1.5vw/1.2em Muli;
-  font-weight: 400;
+.join-button span {
+  position: relative;
   display: block;
-  -webkit-margin-before: 1em;
-  -webkit-margin-after: 1em;
-  -webkit-margin-start: 0px;
-  -webkit-margin-end: 0px;
-}
-
-.wordWrapper p a {
-  color: #9F1F12;
-  text-decoration: none;
-  font-weight: 800;
-}
-
-.wordWrapper p a:hover {
-  color: #b24b41;
-  transition: .1s;
-}
-
-.winter {
-  color: #00548C;
-}
-
-#launcher {
-  background: #1c1b1e;
-  padding-bottom: 10vw;
-  position: relative;
+  z-index: 1;
   width: 100%;
-  box-sizing: border-box;
-  padding: 7.5vw 15% 0 10%;
-  display: flex;
+  transition: all .35s ease-out;
+  top: 1px;
+  color: #ffffff;
 }
 
-#launcher .wordWrapper p {
-  color: #e9e9e9;
+#section1 {
+  background: -webkit-gradient(linear, top left, bottom left, from(#4bbfc3), to(#7baabe));
+		background: -webkit-linear-gradient(#4BBFC3, #7BAABE);
+		background: linear-gradient(#4BBFC3,#7BAABE);
 }
 
-#launcher img {
-  float: right;
-  width: 35%;
-  padding: 5%;
-}
-
-#community {
-  background: #fff;
-  padding-bottom: 10vw;
-  position: relative;
-  width: 100%;
-  box-sizing: border-box;
-  padding: 7.5vw 15% 0 10%;
-  display: flex;
-}
-
-#community img {
-  float: left;
-  width:35%;
-  padding: 5% 5% 5% 0;
-}
-
-#accomplishments {
-  background: #1c1b1e;
-  padding-bottom: 10vw;
-  position: relative;
-  width: 100%;
-  box-sizing: border-box;
-  padding: 7.5vw 15% 0 10%;
-  display: flex;
-}
-
-#accomplishments .wordWrapper p {
-  color: #e9e9e9;
-}
-
-#accomplishments .wordWrapper img {
-  position: relative;
-  width: 80%;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.extra {
-  font: 2vw/1.5em Anton-Regular;
-  text-transform: uppercase;
-  text-align: center;
-  padding-bottom: 25px;
-  width: 100%;
-  position: relative;
-  padding-bottom: 25%;
-  height: 0;
-  display: block;
-}
-
-.extra h3 {
-  display: block;
-  -webkit-margin-before: 1em;
-  -webkit-margin-after: 1em;
-  -webkit-margin-start: 0px;
-  -webkit-margin-end: 0px;
-  margin: 0;
-  padding: 0;
-}
-
-.logos {
-  position: absolute;
-  list-style: none;
-  width: 100%;
-  height: 100%;
-  padding: 0;
-  font-size: 0;
-  text-align: center;
-}
-
-.logos a {
-  display: inline-block;
-  width: 18%;
-  height: 80%;
-  padding: 5px 30px;
-  box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  text-decoration: none;
-  background-color: transparent;
-  transition: all .2s ease-in-out;
-}
-
-.logos a:hover {
-  transform: scale(1.1);
-}
-
-.kotaku-logo:before {
-  content: "";
-  display: block;
-  position: relative;
-  width: 100%;
-  height: 100%;
-  background: url('https://westeroscraft.com/Assets/Kotaku_logo.svg.png');
-  background-position: 50%;
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-
-.wired-logo:before {
-  content: "";
-  display: block;
-  position: relative;
-  width: 100%;
-  height: 100%;
-  background: url('https://westeroscraft.com/Assets/Wired_logo.svg.png');
-  background-position: 50%;
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-
-.time-logo:before {
-  content: "";
-  display: block;
-  position: relative;
-  width: 100%;
-  height: 100%;
-  background: url('https://westeroscraft.com/Assets/Time_Magazine_logo.svg.png');
-  background-position: 50%;
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-
-.vanda-logo:before {
-  content: "";
-  display: block;
-  position: relative;
-  width: 100%;
-  height: 100%;
-  background: url('https://westeroscraft.com/Assets/V_and_A_Museum-logo.com.png');
-  background-position: 50%;
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-
-.rooster-logo:before {
-  content: "";
-  display: block;
-  position: relative;
-  width: 100%;
-  height: 100%;
-  background: url('https://westeroscraft.com/Assets/rooster_teeth_logo.png');
-  background-position: 50%;
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-
-@keyframes bounce {
-  from {
-    transform: translateY(0px);
-  }
-  to {
-    transform: translateY(-15px);
-  }
-}
-@-webkit-keyframes bounce {
-  from {
-    transform: translateY(0px);
-  }
-  to {
-    transform: translateY(-15px);
-  }
-}
-
-.bounce {
-  -moz-animation: bounce 2s infinite;
-  -webkit-animation: bounce 2s infinite;
-  animation: bounce 2s infinite;
-}
-
-
-/* TABLET STYLES */
-
-@media (max-width: 768px) {
-  
-  .logo h1 {
-    font: 10vw/0.5em Ringbearer;
-  }
-  
-  .logo h3 {
-    font: 2vw/1.8em Muli-Light;
-  }
-  
-  .wordWrapper p {
-    padding: none;
-    font: 18px/1.1em Muli;
-    font-weight: 800;
-  }
-  
-  .header h2 {
-    font: 15px/1em Muli;
-    font-weight: 600;
-  }
-
-  .logos a {
-    width: 20%;
-    padding: 5px 15px;
-  }
-
-  .logos a:hover {
-    transform: none;
-  }
-  
-  #top-down-arrow {
-    font-size: 50px;
-    animation-name: none;
-  }
-
-  #launcher {
-    padding: 5.5vw 10% 0 10%;
-  }
-
-  #community {
-    padding: 5.5vw 10% 0 10%;
-    text-align: right;
-  }
-
-  #accomplishments {
-    padding: 5.5vw 10% 0 10%;
-  }
-  
-  .leftMenu {
-    display: none;
-  }
-  
-  .navWrapper {
-    left: 50%;
-    transform: translateX(-50%);
-  }
-  
-  .navbar {
-    left: 50%;
-    transform: translateX(-50%);
-  }
-  
-  .navbarLink:after {
-    display: none;
-  }
-}
-
-/* MOBILE STYLES */
-
-@media (max-width: 480px) {
-
-  .mobileMenu {
-    display: inline-block;
-    position: absolute;
-    margin: 0 auto;
-    width: 55px;
-    height: 20px;
-    background: transparent;
-    vertical-align: middle;
-    right: 0;
-    top: 12.5px;
-  }
-  
-  .mobileMenu i {
-    backface-visibility: hidden;
-    position: absolute;
-    left: 13px;
-    right: 13px;
-    font-size: 30px;
-    color: #fff;
-    transition: .2s;
-  }
-
-  .mobileMenuColor {
-    color: #000 !important;
-  }
-
-  .mobileMenu:before {
-    top: 0;
-  }
-
-  .mobileMenu span {
-    top:8px;
-  }
-
-  .mobileMenu:after {
-    top:16px;
-  }
-
-
-  .navbar {
-    left: 30%;
-    top: 50px;
-  }
-
-  .navWrapper:before {
-    display: none;
-  }
-
-  .contentWrapper:before {
-    display: block;
-    position: absolute;
-    width: 100%;
-    content: "";
-    z-index: 1;
-  }
-
-  .contentWrapperVisibility:before {
-    position: fixed;
-    background: #f6f6f6;
-    opacity: 1;
-    height: 100%;
-    transition: .2s;
-  }
-
-  .contentWrapperVisibility {
-    height: 100%;
-  }
-
-  .navbarLink {
-    visibility: hidden;
-    color: #000;
-    display: block;
-    padding: 10px;
-    font: 25px/1em Muli;
-    font-weight: 800;
-    border-bottom: solid 3px #9F1F12;
-  }
-
-  .navbarLinkVisibility {
-    visibility: visible;
-  }
-
-  .logo h1 {
-    font: 11vw/0.5em Ringbearer;
-  }
-  .logo h3 {
-    font: 3vw/1.8em Muli;
-    font-weight: 400;
-  }
-
-  .extra {
-    display: none;
-  }
-
-  #community img {
-    display: none;
-  }
-
-  #launcher img {
-    display: none;
-  }
+#section2 {
+  background: -webkit-gradient(linear, top left, bottom left, from(#969ac6), to(#636F8F));
+		background: -webkit-linear-gradient(#969AC6, #636F8F);
+		background: linear-gradient(#969AC6,#636F8F);
 }
