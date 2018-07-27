@@ -62,7 +62,7 @@
 
 
 #section0 .content h3 {
-  font-family: 'Lato', sans-serif;
+  font-family: "Palatino Linotype", Palatino, serif;;
   text-transform: uppercase;
   font-size: 2vw;
   font-weight: 400;
@@ -76,7 +76,7 @@
   z-index: 3;
   width: 100%;
   display: flex;
-  height: 50px;
+  height: 75px;
   align-items: center;
 }
 
@@ -86,7 +86,7 @@
   background: #000;
   opacity: 0;
   width: 100%;
-  padding: 40px 0;
+  padding: 37.5px 0;
   z-index: -2;
   transition: opacity .35s ease-out;
 }
@@ -144,24 +144,7 @@
   color: inherit;
   background: darkred;
 }
-/* 
-.join-button::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  margin: auto;
-  background: linear-gradient(120deg,#9b4b0a,#ff8939,#9b4b0a);
-  background-size: 400% 400%;
-}
 
-.join-button::after {
-  right: 0;
-  width: 100%;
-  animation: gradient-1ziY361 3s ease-in-out infinite;
-  transition: width .5s cubic-bezier(1,0,0,1);
-  z-index: 0;
-} */
 
 .join-button span {
   position: relative;
@@ -174,13 +157,27 @@
 }
 
 #section1 {
-  background: -webkit-gradient(linear, top left, bottom left, from(#F1EADA), to(#C3C9B8));
-		background: -webkit-linear-gradient(#F1EADA, #C3C9B8);
-		background: linear-gradient(#F1EADA,#C3C9B8);
+  background: -webkit-gradient(linear, top left, bottom left, from(#F1EADA), to(#FFDEBA));
+		background: -webkit-linear-gradient(#F1EADA, #FFDEBA);
+		background: linear-gradient(#F1EADA,#FFDEBA);
 }
 
 #section2 {
-  background: -webkit-gradient(linear, top left, bottom left, from(#C3C9B8), to(#95A99C));
-		background: -webkit-linear-gradient(#C3C9B8, #95A99C);
-		background: linear-gradient(#C3C9B8,#95A99C);
+  background: -webkit-gradient(linear, top left, bottom left, from(#FFDEBA), to(#FFCCA5));
+		background: -webkit-linear-gradient(#FFDEBA, #FFCCA5);
+		background: linear-gradient(#FFDEBA,#FFCCA5);
 }
+
+.drop{
+  display:block;
+  float:left;
+  width:72px;
+  height:72px;
+  margin-top:5px;
+  padding-right:8px;
+  text-indent: -9000px;
+  }
+.o{
+  background-size:cover;
+  background: url(https://westeroscraft.com/Assets/square_logo.png) 0 0 no-repeat;
+  }
