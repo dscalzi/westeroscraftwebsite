@@ -2,9 +2,9 @@ $(window).scroll(function() {
     var scroll = $(window).scrollTop();
 
     if (scroll >= 10) {
-        $(".navWrapper").addClass("navWrapperShow");
+        $(".header").addClass("headershow");
     } else {
-        $(".navWrapper").removeClass("navWrapperShow");
+        $(".header").removeClass("headershow");
     }
 });
 
