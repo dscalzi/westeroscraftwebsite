@@ -35,9 +35,30 @@
   justify-content: center;
   align-items: center;
   position: relative;
-  z-index: 4;
+  z-index: 10;
   width: 100%;
   color: #f9f9f9;
+}
+
+.video-content {
+  left: 0%;
+  top: 0%;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  position: absolute;
+}
+
+.video-content:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 5;
+  background: #7692BC;
+  opacity: .2;
 }
 
 #section0 .content h1 {
@@ -113,8 +134,7 @@
   position: absolute;
   width: 50px;
   height: 50px;
-  margin: 0;
-  left: 12.5px;
+  margin-left: 20px;
   top: 12.5px;
 }
 
@@ -126,37 +146,6 @@
   background-size: contain;
   background-repeat: no-repeat;
   transition: all .25s cubic-bezier(0, 0, .2, 1);
-}
-
-.join-button {
-  position: relative;
-  overflow: hidden;
-  padding: 0;
-  margin: 0 20px;
-  display: inline-block;
-  width: 150px;
-  height: 40px;
-  text-transform: uppercase;
-  text-decoration: none;
-  text-align: center;
-  font: 1em "Palatino Linotype", Palatino;
-  letter-spacing: 2px;
-  line-height: 40px;
-  transition: all .35s ease-out;
-  cursor: pointer;
-  color: inherit;
-  background: darkred;
-}
-
-
-.join-button span {
-  position: relative;
-  display: block;
-  z-index: 1;
-  width: 100%;
-  transition: all .35s ease-out;
-  top: 1px;
-  color: #ffffff;
 }
 
 #section1 {
@@ -210,29 +199,31 @@
   }
 
   .button-container {
-
+    margin: 0 20px;
   }
   
   .btn {
     display: block;
-    height: 50px;
-    width: 186px;
+    height: 46px;
+    width: 162px;
     position: relative;
     overflow: hidden;
     text-decoration: none;
     text-transform: uppercase;
     letter-spacing: 2px;
     color: white;
-    font-size: 14px;
+    font: 1em "Palatino Linotype", Palatino;
+    font-weight: 400;
     text-align: center;
   }
+
   .btn:after {
     position: absolute;
     content: '';
     display: inline-block;
     background: #3bade3;
-    background: linear-gradient(45deg, #3bade3 0%, #576fe6 25%, #9844b7 51%, #ff357f 100%);
-    height: 50px;
+    background: linear-gradient(45deg, #772522 0%, #d34f48 25%, #772522 51%, #9F1F12 100%);  
+    height: 46px;
     width: 372px;
     z-index: -1;
     -webkit-transform: translateX(-280px);
@@ -241,12 +232,14 @@
     transition: transform 400ms ease-in;
     transition: transform 400ms ease-in, -webkit-transform 400ms ease-in;
   }
+
   .btn:hover:after {
     -webkit-transform: translateX(-200px);
             transform: translateX(-200px);
   }
+
   .btn span {
     position: relative;
-    top: 16px;
+    top: 12px;
   }
   
