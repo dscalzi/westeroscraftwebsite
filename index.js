@@ -7,3 +7,8 @@ $(window).scroll(function() {
         $(".home-navigation").removeClass("navigation-show");
     }
 });
+
+$('#toggle').click(function() {
+    $(this).toggleClass('active');
+    $('#overlay').toggleClass('open');
+   });
