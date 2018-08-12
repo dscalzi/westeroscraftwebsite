@@ -11,6 +11,36 @@
   font-style: normal;
 }
 
+body {
+  min-height: 100%;
+}
+
+
+/*********************** Section Gradients ************************/
+
+#section1 {
+  background: -webkit-gradient(linear, top left, bottom left, from(#F1EADA), to(#f3e4cb));
+  background: -webkit-linear-gradient(#F1EADA, #f3e4cb);
+  background: linear-gradient(#F1EADA,#f3e4cb);
+}
+
+#section2 {
+  background: -webkit-gradient(linear, top left, bottom left, from(#f3e4cb), to(#f6dcbd));
+  background: -webkit-linear-gradient(#f3e4cb, #f6dcbd);
+  background: linear-gradient(#f3e4cb,#f6dcbd);
+}
+
+#section3 {
+  background: -webkit-gradient(linear, top left, bottom left, from(#f6dcbd), to(#fad5b0));
+  background: -webkit-linear-gradient(#f6dcbd, #fad5b0);
+  background: linear-gradient(#f6dcbd,#fad5b0);
+}
+
+#section4 {
+  background: -webkit-gradient(linear, top left, bottom left, from(#fad5b0), to(#ffcca5));
+  background: -webkit-linear-gradient(#fad5b0, #ffcca5);
+  background: linear-gradient(#fad5b0,#ffcca5);
+}
 
 #section0 .video {
   position: absolute;
@@ -90,7 +120,7 @@
   letter-spacing: 8px;
 }
 
-.header {
+.home-navigation {
   position: fixed;
   right: 0;
   top: 0;
@@ -101,7 +131,7 @@
   align-items: center;
 }
 
-.header:before {
+.home-navigation:before {
   opacity: 0;
   content: "";
   position: absolute;
@@ -112,15 +142,15 @@
   transition: opacity .35s ease-out;
 }
 
-.header .navbar {
+.home-navigation .home-navbar {
   margin-left: auto;
 }
 
-.headershow:before {
+.navigation-show:before {
   opacity: .6;
 }
 
-.navbarLink {
+.home-navbar .navbar-link {
   font: 1em "Palatino Linotype", Palatino;
   font-weight: 400;
   text-decoration: none;
@@ -128,9 +158,11 @@
   color: #fff;
   cursor: pointer;
   text-transform: uppercase;
+  text-shadow: 2px 2px black;
+  z-index: 50;
 }
 
-.navbarLogoWrapper {
+.navbar-logo-wrapper {
   position: absolute;
   width: 50px;
   height: 50px;
@@ -138,7 +170,7 @@
   top: 12.5px;
 }
 
-.navbarLogo {
+.navbar-logo {
   margin: 0;
   width: 50px;
   height: 50px;
@@ -148,39 +180,22 @@
   transition: all .25s cubic-bezier(0, 0, .2, 1);
 }
 
-#section1 {
-  background: -webkit-gradient(linear, top left, bottom left, from(#F1EADA), to(#FFDEBA));
-		background: -webkit-linear-gradient(#F1EADA, #FFDEBA);
-		background: linear-gradient(#F1EADA,#FFDEBA);
+#section1 .featured {
+  font-family: "Palatino Linotype", Palatino, serif;
+  text-transform: uppercase;
+  font-size: 2vw;
+  font-weight: 400;
+  letter-spacing: 8px;
+  text-align: center;
+  color: #9F1F12;
 }
 
-#section2 {
-  background: -webkit-gradient(linear, top left, bottom left, from(#FFDEBA), to(#00548C));
-		background: -webkit-linear-gradient(#FFDEBA, #00548C);
-		background: linear-gradient(#FFDEBA,#00548C);
-}
-
-.drop {
-  display:block;
-  float:left;
-  width:72px;
-  height:72px;
-  margin-top:5px;
-  padding-right:8px;
-  text-indent: -9000px;
-  }
-
-.o {
-  background-size:cover;
-  background: url(https://westeroscraft.com/Assets/square_logo.png) 0 0 no-repeat;
-  }
-
-  .wordWrapper {
+  .word-wrapper {
     margin: 0 auto;
     max-width: 960px;
   }
 
-  .wordWrapper p {
+  .word-wrapper p {
     font-family: "Palatino Linotype", Palatino, serif;
     font-size: 24px;
     line-height: 36px;
@@ -243,3 +258,20 @@
     top: 12px;
   }
   
+  .featured-items-wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    height: 10%;
+    margin: 0 auto;
+    max-width: 1136px;
+  }
+
+  .featured-items-wrapper .featured-item {
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+    width: 100%;
+    height: 100%;
+    margin: 0 20px;
+  }

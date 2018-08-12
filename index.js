@@ -2,20 +2,8 @@ $(window).scroll(function() {
     var scroll = $(window).scrollTop();
 
     if (scroll >= 10) {
-        $(".header").addClass("headershow");
+        $(".home-navigation").addClass("navigation-show");
     } else {
-        $(".header").removeClass("headershow");
+        $(".home-navigation").removeClass("navigation-show");
     }
-});
-
-$("#top-down-arrow").click(function() {
-    $('html, body').animate({
-        scrollTop: $("#about").offset().top
-    }, 1500);
-});
-
-$(".mobileMenu").click(function() {
-    $(".contentWrapper").toggleClass("contentWrapperVisibility");
-    $(".navbarLink").toggleClass("navbarLinkVisibility");
-    $(".mobileMenu i").toggleClass("mobileMenuColor");
 });
