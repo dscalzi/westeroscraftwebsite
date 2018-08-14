@@ -44,16 +44,16 @@ h1 {
  p {
   font-family: "Palatino Linotype", Palatino, serif;
   font-size: 20px;
-  line-height: 20px;
+  line-height: 28px;
   text-align: left;
  }
 
 /*********************** Section Gradients ************************/
 
 #section1 {
-  background: -webkit-gradient(linear, top left, bottom left, from(#F1EADA), to(#f3e4cb));
-  background: -webkit-linear-gradient(#F1EADA, #f3e4cb);
-  background: linear-gradient(#F1EADA, #f3e4cb);
+  background: -webkit-gradient(linear, top left, bottom left, from(#F2E0C8), to(#f3e4cb));
+  background: -webkit-linear-gradient(#F2E0C8, #f3e4cb);
+  background: linear-gradient(#F2E0C8, #f3e4cb);
 }
 
 #section2 {
@@ -616,13 +616,22 @@ h1 {
 
 .launcher img {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
+  width: 100%;
+  height: auto;
 }
 
 .launcher .launcher-content {
   margin: 0 auto;
   max-width: 95rem;
   padding: 10px 50px 10px 20px;
+}
+
+.launcher .launcher-content ul {
+  list-style: none;
+}
+
+.launcher .launcher-content li {
+  border-bottom: 1px solid gray;
 }
 
 .launcher .launcher-description .launcher-description-item {
@@ -688,6 +697,10 @@ h1 {
   text-align: center;
   width: 350px;
   margin-top: 10px;
+}
+
+.launcher .launcher-content .link {
+  color: #772522;
 }
 
 /*********************** Animations ************************/

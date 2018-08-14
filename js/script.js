@@ -80,8 +80,8 @@ $(document).ready(function(){
 
             // Platform download links
 
-            console.log(preWinDL, preMacDL, preLinuxDL)
-            console.log(relWinDL, relMacDL, relLinuxDL)
+            // console.log(preWinDL, preMacDL, preLinuxDL)
+            // console.log(relWinDL, relMacDL, relLinuxDL)
             $('.download-btn').attr('href', relWinDL);
             $('.mac-dl').attr('href', relMacDL);
             $('.lin-dl').attr('href', relLinuxDL);
